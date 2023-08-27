@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_reddit_clone/core/common/firebase_constants.dart';
 import 'package:flutter_reddit_clone/core/contants/constants.dart';
+import 'package:flutter_reddit_clone/core/failure.dart';
 import 'package:flutter_reddit_clone/core/providers/firebase_providers.dart';
 import 'package:flutter_reddit_clone/models/user_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

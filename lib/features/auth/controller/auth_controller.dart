@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_reddit_clone/core/utils.dart';
 import 'package:flutter_reddit_clone/features/auth/repository/auth_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,12 +15,12 @@ class AuthController {
   AuthController({required AuthRepository authRepository})
       : _authRepository = authRepository;
 
-  void signInWithGoogle() {
+  void signInWithGoogle(BuildContext context) {
     try {
-      final user = _authRepository.signInWithGoogle();
+      _authRepository.signInWithGoogle();
       // do something
     } catch (e) {
-      // show snackbar error
+      showSnackBar(context, e.toString());
     }
   }
 }
