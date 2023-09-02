@@ -43,7 +43,6 @@ class AuthController extends StateNotifier<bool> {
       final userModel = await _authRepository.signInWithGoogle();
       state = false;
       _ref.read(userProvider.notifier).update((state) => userModel);
-      // do something
     } catch (e) {
       showSnackBar(context, e.toString());
     }
