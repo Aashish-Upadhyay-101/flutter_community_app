@@ -31,6 +31,8 @@ class AuthRepository {
   CollectionReference get _users =>
       _firestore.collection(FirebaseConstants.usersCollection);
 
+  Stream<User?> get authStateChange => _auth.authStateChanges();
+
   Future<UserModel?> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
@@ -61,6 +63,8 @@ class AuthRepository {
         userModel = await getUserData(userCredential.user!.uid).first;
       }
       return userModel;
+    } on FirebaseException catch (e) {
+      throw e.message!;
     } catch (e) {
       rethrow;
     }

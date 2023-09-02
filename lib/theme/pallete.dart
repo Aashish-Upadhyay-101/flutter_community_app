@@ -7,7 +7,7 @@ class Pallete {
   static const drawerColor = Color.fromRGBO(18, 18, 18, 1);
   static const whiteColor = Colors.white;
   static var redColor = Colors.red.shade500;
-  static var blueColor = Colors.blue.shade300;
+  static var blueColor = Colors.blue.shade600;
 
   // Themes
   static var darkModeAppTheme = ThemeData.dark().copyWith(

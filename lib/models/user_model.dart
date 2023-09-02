@@ -61,34 +61,4 @@ class UserModel {
       awards: List<String>.from(map['awards']),
     );
   }
-
-  @override
-  String toString() {
-    return 'UserModel(name: $name, profilePicture: $profilePicture, banner: $banner, uid: $uid, isAuthenticated: $isAuthenticated, karma: $karma, awards: $awards)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is UserModel &&
-        other.name == name &&
-        other.profilePicture == profilePicture &&
-        other.banner == banner &&
-        other.uid == uid &&
-        other.isAuthenticated == isAuthenticated &&
-        other.karma == karma &&
-        listEquals(other.awards, awards);
-  }
-
-  @override
-  int get hashCode {
-    return name.hashCode ^
-        profilePicture.hashCode ^
-        banner.hashCode ^
-        uid.hashCode ^
-        isAuthenticated.hashCode ^
-        karma.hashCode ^
-        awards.hashCode;
-  }
 }
