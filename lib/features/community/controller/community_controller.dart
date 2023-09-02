@@ -16,6 +16,16 @@ final communityControllerProvider =
   );
 });
 
+final userCommunityProvider = StreamProvider((ref) {
+  final communityController = ref.watch(communityControllerProvider.notifier);
+  return communityController.getUserCommunities();
+});
+
+final getCommunityByNameProvider = StreamProvider.family((ref, String name) {
+  final communityController = ref.watch(communityControllerProvider.notifier);
+  return communityController.getCommunityByName(name);
+});
+
 class CommunityController extends StateNotifier<bool> {
   final CommunityRepository _communityRepository;
   final Ref _ref;
@@ -48,5 +58,14 @@ class CommunityController extends StateNotifier<bool> {
       state = false;
       showSnackBar(context, e.toString());
     }
+  }
+
+  Stream<List<Community>> getUserCommunities() {
+    final uid = _ref.read(userProvider)!.uid;
+    return _communityRepository.getUserCommunities(uid);
+  }
+
+  Stream<Community> getCommunityByName(String name) {
+    return _communityRepository.getCommunityByName(name);
   }
 }

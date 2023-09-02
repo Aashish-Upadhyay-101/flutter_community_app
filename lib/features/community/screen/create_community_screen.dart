@@ -63,7 +63,6 @@ class _CreateCommunityScreenState extends ConsumerState<CreateCommunityScreen> {
                   ElevatedButton(
                     onPressed: createCommunity,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Pallete.blueColor,
                       minimumSize: const Size(
                         double.infinity,
                         50,
