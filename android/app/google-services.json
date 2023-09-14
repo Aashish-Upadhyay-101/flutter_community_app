@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "880556040158-lheisjk3oamvqrq5dnr5fd1hhecv9sh0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_reddit_clone",
+            "certificate_hash": "16bd519a48db181d6f2d3c7a4e0f15d608c3facc"
+          }
+        },
+        {
           "client_id": "880556040158-18gcqoqssrnd5as9tr6ittsh7o2v7a8j.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -31,10 +39,10 @@
               "client_type": 3
             },
             {
-              "client_id": "880556040158-m3csmne93cj3cueap2oef4ujh2toaha9.apps.googleusercontent.com",
+              "client_id": "880556040158-etvinpvnkb6johbjcj4qp0ak046662sf.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.flutterRedditClone"
+                "bundle_id": "com.example.flutterRedditClone.RunnerTests"
               }
             }
           ]
